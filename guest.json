@@ -1,0 +1,129 @@
+{
+  "userEvents": {
+    "userKey1": {
+      "eventKey1": true,
+      "eventKey2": true,
+      "eventKey5": true
+    },
+    "userKey2": {
+      "eventKey1": true,
+      "eventKey3": true,
+      "eventKey8": true
+    }
+  },
+
+
+  "eventGuests": {
+    "hostId" : "userKey",
+    "eventId": "eventUuid",
+    "guestKey"
+  },
+
+  "eventGuests" : {
+    "eventKey": {
+      "guestKey1": {
+        "hostId": "userUid",
+        "name": "some name 1",
+        "email": "guest1@foo.com",
+        "phone": "917-555-1234",
+        "additional_guests": 1
+      },
+    }
+  }
+  }
+}
+
+  "userKey1": {
+    "eventKey1": {
+
+  "eventGuestsPrivate": {
+    "userKey1": {
+      "eventKey1": {
+        "guestKey1": {
+          "name": "some name 1",
+          "email": "guest1@foo.com",
+          "phone": "917-555-1234",
+          "additional_guests": 1
+        },
+        "guestKey2": {
+          "name": "some name 2",
+          "email": "guest1@foo.com",
+          "phone": "917-555-1234"
+        }
+      },
+      "eventKey2": {
+        "guestKey1": {
+          "name": "some name 1",
+          "email": "guest1@foo.com",
+          "phone": "917-555-1234",
+          "additional_guests": 1
+        }
+      }
+    }
+  },
+
+  "eventGuestsPublic": {
+    "eventKey": {
+      "guestKey1": {
+        "name": "some name 1"
+      }
+    }
+  },
+
+  "userGuests": {
+    "userKey1": {
+      "guestKey1": {
+        "name": "some name 1",
+        "email": "guest1@foo.com",
+        "phone": "917-555-1234",
+        "additional_guests": 1
+      },
+      "guestKey2": {
+        "name": "some name 2",
+        "email": "guest1@foo.com",
+        "phone": "917-555-1234"
+      }
+    }
+  }
+}
+
+
+
+//  "guests": {
+//    "guestKey": {
+//      "name": "some name",
+//      "email": "guest@foo.com",
+//      "phone": "917-555-1234",
+//      "additional_guests": 1,
+//      "user_id": "userKey"
+//    }
+//  },
+
+
+
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "eventGuestsPrivate": {
+      "123456789": {
+        ".read": true,
+        ".write": true
+      }
+    },
+    "eventGuestsPublic": {
+      "$event": {
+        "$guest": {
+          ".write": "!data.exists()"
+        },
+        ".write": "!data.exists()"
+      },
+      ".read": true
+    }
+  }
+}
+
+
+//get guests for an event
+
+//get guests for event and user

@@ -1,0 +1,150 @@
+html, body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+body {
+    background: #ECEFF1;
+    color: rgba(0,0,0,0.87);
+    margin: 0;
+    padding: 0;
+}
+
+#add-guest-form {
+    background: white;
+    max-width: 560px;
+    margin: 100px auto 16px;
+    padding: 32px 24px;
+    border-radius: 3px;
+}
+
+#add-guest-form p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+
+#add-guest-form a {
+    display: block;
+    text-align: center;
+    background: #039be5;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+}
+#add-guest-form, #add-guest-form a {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#load, .status {
+    color: rgba(0,0,0,0.4);
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    body, #add-guest-form { margin-top: 0; background: white; box-shadow: none; }
+    body { border-top: 16px solid #ffa100; }
+}
+
+.mdl-layout__header-row span {
+    margin-left: 15px;
+    margin-top: 17px;
+}
+.mdl-grid {
+    max-width: 1024px;
+    margin: auto;
+}
+.material-icons {
+    font-size: 36px;
+    top: 8px;
+    position: relative;
+}
+.mdl-layout__header-row {
+    padding: 0;
+    margin: 0 auto;
+}
+.mdl-card__supporting-text {
+    width: auto;
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#guest-list {
+    overflow-y: auto;
+    margin-bottom: 10px;
+    height: calc(100% - 80px);
+}
+
+.guest-container {
+    background-color: #fff;
+    display: block;
+    border-top: 1px solid #f3f3f3;
+    padding-top: 10px;
+    padding-left: 50px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.guest-container.visible {
+    opacity: 1;
+}
+
+.guest-container .spacing {
+    display: table-cell;
+    vertical-align: top;
+}
+
+#add-guest-form .mdl-textfield {
+    width: calc(100% - 100px);
+}
+#add-guest-form button {
+    width: 120px;
+    margin: 15px 0 0 10px;
+}
+
+
+#user-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 22px;
+    width: 100%;
+    right: 0;
+    padding-left: 10px;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+#user-container #user-name {
+    font-size: 16px;
+    line-height: 36px;
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 610px) {
+    header {
+        height: 113px;
+        padding-bottom: 80px !important;
+    }
+    #user-container {
+        top: 72px;
+        background-color: rgb(3,155,229);
+        height: 38px;
+        padding-top: 3px;
+        padding-right: 2px;
+    }
+    #user-container #user-pic {
+        top: 2px;
+        width: 33px;
+        height: 33px;
+        background-size: 33px;
+    }
+}
+.mdl-textfield__label:after {
+    background-color: #0288D1;
+}
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label {
+    color: #0288D1;
+}
+.mdl-button .material-icons {
+    top: -1px;
+    margin-right: 5px;
+}
